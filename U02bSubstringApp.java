@@ -54,7 +54,7 @@ public class U02bSubstringApp {
         // and then change it to "justin". Use the toLowerCase method. <ins>Print the
         // result</ins>
         System.out.println("3. Convert the word to all lowercase.");
-        System.out.println(inputWord.toLowerCase());
+        System.out.println(inputWord.toLowerCase()); ..
 
 
 
@@ -63,7 +63,7 @@ public class U02bSubstringApp {
         // becomes "Bradley". Use the substring, toUpperCase, and toLowerCase methods.
         // <ins>Print the result</ins>
         System.out.println("4. Convert the word so that the first letter is capitalized.");
-        // TODO
+        // TODO3256584675231=][plo4k3hoiygtujk0dfp4[;;;]]
 
 
 
