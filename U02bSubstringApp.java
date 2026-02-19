@@ -17,13 +17,13 @@ public class U02bSubstringApp {
         // create an int counter starts at 0
         int counter = 0; // DONE
         // while the counter is less than the length of inputWord
-        while(counter < inputWord.length()) { // TODO 
+        while(counter < inputWord.length()) { // DONE 
             // get a singleLetter using inputWord substring from counter to counter+1
-            String singleLetter = inputWord.substring(counter, counter+1); // TODO 
+            String singleLetter = inputWord.substring(counter, counter+1); // DONE 
             // if vowels index of singleLetter equals -1
-            if (vowels.indexOf(singleLetter) == -1) { // TODO 
+            if (vowels.indexOf(singleLetter) == -1) { // DONE 
                 // add one to counter so we check the next letter in the string
-                counter++; // TODO 
+                counter++; // DONE 
             }
             else{
                 // done! counter is the index of the first vowel
@@ -40,41 +40,49 @@ public class U02bSubstringApp {
         // 1. Ask the user for a word and collect it with Scanner.
         Scanner input = new Scanner(System.in);
         System.out.println("1. Ask the user for a word and collect it with Scanner.");
-        String inputWord = input.next(); // DONE
+        // DONE
+        String inputWord = input.next();
 
         // 1. Convert the word to all caps. For example, if the user input "hello" and
         // then change it to "HELLO". Use the toUpperCase method. *Print the
         // result*
         System.out.println("2. Convert the word to all caps.");
-        System.out.println(inputWord.toUpperCase()); // DONE
-
-
+        // DONE
+        System.out.println(inputWord.toUpperCase());
 
         // 1. Convert the word to all lowercase. For example, if the user input "Justin"
         // and then change it to "justin". Use the toLowerCase method. <ins>Print the
         // result</ins>
         System.out.println("3. Convert the word to all lowercase.");
-        System.out.println(inputWord.toLowerCase()); ..
-
-
+        // DONE
+        System.out.println(inputWord.toLowerCase());
 
         // 1. Convert the word so that the first letter is capitalized. For example, if
         // the user input "hello" it becomes "Hello" and if the user input "BRADLEY" it
         // becomes "Bradley". Use the substring, toUpperCase, and toLowerCase methods.
         // <ins>Print the result</ins>
         System.out.println("4. Convert the word so that the first letter is capitalized.");
-        // TODO3256584675231=][plo4k3hoiygtujk0dfp4[;;;]]
-
-
+        // DONE
+        String firstLetter = inputWord.substring(0, 1).toUpperCase();
+        String restOfWord = inputWord.substring(1).toLowerCase();
+        System.out.println(firstLetter + restOfWord);
 
         // 1. Convert the word so "ab" is inserted before the first vowel. For example,
         // if the user input "Justin" it becomes "Jabustin" and if the user input
         // "screen" it becomes "scrabeen". Use the String class substring method and the
         // static findFirstVowel(inputWord) method. <ins>Print the result</ins>
         System.out.println("5. Convert the word so \"ab\" is inserted before the first vowel.");
-        // TODO 
-
-
+        // DONE 
+        int firstVowelIndex = findFirstVowel(inputWord);
+        if (firstVowelIndex != -1) {
+            String beforeVowel = inputWord.substring(0, firstVowelIndex);
+            String fromVowelOn = inputWord.substring(firstVowelIndex);
+            System.out.println(beforeVowel + "ab" + fromVowelOn);
+        }
+        else {
+            // no vowel found, just print the original word
+            System.out.println(inputWord);
+        }
 
         // 1. Shm-reduplication. You will need to use findFirstVowel and replace the
         // characters before the first vowel with "shm". If the user input "Justin" it
@@ -82,20 +90,32 @@ public class U02bSubstringApp {
         // "bradley-shmadley". Use the String class substring method and the static
         // findFirstVowel(inputWord) method. <ins>Print the result</ins>
         System.out.println("6. Shm-reduplication.");
-        // TODO 
-
-
-
+        // DONE 
+        firstVowelIndex = findFirstVowel(inputWord);
+        if (firstVowelIndex != -1) {
+            String beforeVowel = inputWord.substring(0, firstVowelIndex);
+            String fromVowelOn = inputWord.substring(firstVowelIndex);
+            System.out.println(inputWord + "-shm" + fromVowelOn);
+        }
+        else {
+            System.out.println(inputWord);
+        }
         // 1. Pig Latin. For example, if the user input "Justin" it becomes "Ustin-jay"
         // and if the user input "bradley" it becomes "Adley-bray". Use the String class
         // substring method, the String toUpperCase method, the String toLowerCase
         // method, and the static findFirstVowel(inputWord) method. <ins>Print the
         // result</ins>
         System.out.println("7. Pig Latin.");
-        // TODO 
-
-
-
+        // DONE 
+        firstVowelIndex = findFirstVowel(inputWord);
+        if (firstVowelIndex != -1) {
+            String beforeVowel = inputWord.substring(0, firstVowelIndex);
+            String fromVowelOn = inputWord.substring(firstVowelIndex);
+            System.out.println(fromVowelOn + "-" + beforeVowel.toLowerCase() + "ay");
+        }
+        else {
+            System.out.println(inputWord);
+        }
         // 1. Generate a username using the first letter (converted to lowercase), the
         // last letter (converted to uppercase), and a random three-digit number from
         // 100 to 999. For example, if the user input "Justin" it might generate "jN371"
@@ -107,7 +127,7 @@ public class U02bSubstringApp {
         // - Use the substring method to ONLY print 3 digits. <ins>Print the random user
         //   name (like "jN371" or "jN784" or "jN196")</ins>
         System.out.println("8. Generate a username.");
-        // TODO 
+        // DONE 
 
 
 
