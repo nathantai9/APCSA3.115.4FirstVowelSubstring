@@ -39,7 +39,7 @@ public class U02bSubstringApp {
 
         // 1. Ask the user for a word and collect it with Scanner.
         Scanner input = new Scanner(System.in);
-        System.out.println("1. Ask the user for a word and collect it with Scanner.");
+        System.out.println("1. Give me any word.");
         // DONE
         String inputWord = input.next();
 
@@ -127,9 +127,8 @@ public class U02bSubstringApp {
         // - Use the substring method to ONLY print 3 digits. <ins>Print the random user
         //   name (like "jN371" or "jN784" or "jN196")</ins>
         System.out.println("8. Generate a username.");
-        // DONE 
-
-
-
+        // TODO
+        firstLetter = inputWord.substring(0,  1);
+        String lastLetter = inputWord.substring(inputWord.length() - 1);
     }
 }
