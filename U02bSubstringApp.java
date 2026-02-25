@@ -127,8 +127,12 @@ public class U02bSubstringApp {
         // - Use the substring method to ONLY print 3 digits. <ins>Print the random user
         //   name (like "jN371" or "jN784" or "jN196")</ins>
         System.out.println("8. Generate a username.");
-        // TODO
+        // DONE
         firstLetter = inputWord.substring(0,  1);
         String lastLetter = inputWord.substring(inputWord.length() - 1);
+        double threeDigitRandomDouble = Math.random() * 900 + 100;
+        String threeDigitRandomString = String.valueOf(threeDigitRandomDouble);
+        String threeDigitRandomSubstring = threeDigitRandomString.substring(0, 3);
+        System.out.println(firstLetter.toLowerCase() + lastLetter.toUpperCase() + threeDigitRandomSubstring);
     }
 }
