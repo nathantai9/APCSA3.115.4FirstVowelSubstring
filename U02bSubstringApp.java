@@ -136,3 +136,4 @@ public class U02bSubstringApp {
         System.out.println(firstLetter.toLowerCase() + lastLetter.toUpperCase() + threeDigitRandomSubstring);
     }
 }
+// FINISHED
